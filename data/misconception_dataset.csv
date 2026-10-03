@@ -1,0 +1,37 @@
+question_id,topic,code,student_answer,student_reasoning,misconception_label,is_correct
+Q01,variables,x = 5; x = x + 2; print(x),5,The second line does not change the original value of x.,variable_reassignment,False
+Q01,variables,x = 5; x = x + 2; print(x),5,I think x remains five after the assignment.,variable_reassignment,False
+Q01,variables,x = 5; x = x + 2; print(x),5,The program reads x but does not store a new value.,variable_reassignment,False
+Q01,variables,x = 5; x = x + 2; print(x),5,Assigning a value once means the variable keeps it.,variable_reassignment,False
+Q02,variables,a = 10; a = a - 3; print(a),10,The second assignment cannot change a.,variable_reassignment,False
+Q02,variables,a = 10; a = a - 3; print(a),10,I believe the original value stays in memory.,variable_reassignment,False
+Q03,operators,print(3 + 2 * 4),20,"I calculate from left to right: 3 plus 2, then times 4.",operator_precedence,False
+Q03,operators,print(3 + 2 * 4),20,Addition should happen before multiplication.,operator_precedence,False
+Q03,operators,print(3 + 2 * 4),20,"I add three and two first, then multiply by four.",operator_precedence,False
+Q03,operators,print(3 + 2 * 4),20,Python evaluates every arithmetic operation left to right.,operator_precedence,False
+Q04,operators,print(10 - 2 * 3),24,"I subtract ten and two first, then multiply by three.",operator_precedence,False
+Q04,operators,print(10 - 2 * 3),24,Subtraction has priority over multiplication.,operator_precedence,False
+Q05,loops,for i in range(3): print(i),0 1 2 3,range(3) includes three as its last value.,loop_range,False
+Q05,loops,for i in range(3): print(i),1 2 3,Counting starts at one and includes the endpoint.,loop_range,False
+Q05,loops,for i in range(3): print(i),0 1 2 3,The number inside range is included.,loop_range,False
+Q05,loops,for i in range(3): print(i),1 2 3,A loop with range three runs from one through three.,loop_range,False
+Q06,loops,"for i in range(1, 4): print(i)",1 2 3 4,The ending value four is included.,loop_range,False
+Q06,loops,"for i in range(1, 4): print(i)",1 2 3 4,range always includes its final argument.,loop_range,False
+Q07,loops,total = 0; for i in range(3): total += i,2,Only the final value of i is stored in total.,loop_accumulation,False
+Q07,loops,total = 0; for i in range(3): total += i,2,The previous total is replaced by the current i.,loop_accumulation,False
+Q07,loops,total = 0; for i in range(3): total += i,0,The total resets to zero during each iteration.,loop_accumulation,False
+Q07,loops,total = 0; for i in range(3): total += i,2,I think total only remembers the last loop value.,loop_accumulation,False
+Q08,loops,"total = 0; for i in range(1, 4): total += i",3,Each new iteration replaces the earlier total.,loop_accumulation,False
+Q08,loops,"total = 0; for i in range(1, 4): total += i",4,The total is just the last value assigned to i.,loop_accumulation,False
+Q01,variables,x = 5; x = x + 2; print(x),7,"The old value is five, so five plus two is seven.",correct_understanding,True
+Q01,variables,x = 5; x = x + 2; print(x),7,The expression calculates a new value and assigns it to x.,correct_understanding,True
+Q03,operators,print(3 + 2 * 4),11,"Multiplication happens first, giving eight, then I add three.",correct_understanding,True
+Q03,operators,print(3 + 2 * 4),11,Two times four is eight and three plus eight is eleven.,correct_understanding,True
+Q05,loops,for i in range(3): print(i),0 1 2,range starts at zero and stops before three.,correct_understanding,True
+Q07,loops,total = 0; for i in range(3): total += i,3,"The total accumulates zero, one, and two to make three.",correct_understanding,True
+Q01,variables,x = 5; x = x + 2; print(x),6,I guessed the answer.,uncertain,False
+Q03,operators,print(3 + 2 * 4),9,I am not sure how Python calculates this.,uncertain,False
+Q05,loops,for i in range(3): print(i),2,I guessed based on the code.,uncertain,False
+Q07,loops,total = 0; for i in range(3): total += i,5,I do not know what the loop does.,uncertain,False
+Q02,variables,a = 10; a = a - 3; print(a),7,"I calculated seven, but I cannot explain why.",uncertain,False
+Q04,operators,print(10 - 2 * 3),4,I used a calculator and do not know the rule.,uncertain,False
